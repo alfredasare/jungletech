@@ -9,7 +9,7 @@
 
 /*Navigation*/
 .mobile-nav-active {
-    @apply bg-indigo-50 border-indigo-500 text-indigo-700;
+    @apply bg-cyan-50 border-cyan-500 text-cyan-700;
 }
 
 .mobile-nav-normal {
@@ -17,7 +17,7 @@
 }
 
 .desktop-nav-active {
-    @apply border-indigo-500 text-gray-900;
+    @apply border-cyan-500;
 }
 
 .desktop-nav-normal {

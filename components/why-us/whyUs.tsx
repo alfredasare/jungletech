@@ -2,19 +2,19 @@ import { CheckIcon } from '@heroicons/react/outline';
 
 const features = [
 	{
-		name: 'Invite team members',
+		name: 'Experience',
 		description:
-			'You can manage phone, email and chat conversations all from a single mailbox.',
+			'Experienced providing top-notch developers for world class companies.',
 	},
 	{
-		name: 'List view',
+		name: 'Management',
 		description:
-			'You can manage phone, email and chat conversations all from a single mailbox.',
+			'We’ve developed Developer-centric management acumen, ensuring continued motivation of developers and ' +
+			'longevity with clients.',
 	},
 	{
-		name: 'Keyboard shortcuts',
-		description:
-			'You can manage phone, email and chat conversations all from a single mailbox.',
+		name: 'Results',
+		description: 'We make things happen.',
 	},
 ];
 
@@ -23,16 +23,14 @@ const WhyUs = () => {
 		<div className='bg-white'>
 			<div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pt-28 lg:pb-0 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
 				<div>
-					<h2 className='text-base font-semibold text-indigo-600 uppercase tracking-wide'>
-						Everything you need
+					<h2 className='text-base font-semibold text-cyan-600 uppercase tracking-wide'>
+						Why us?
 					</h2>
 					<p className='mt-2 text-3xl font-extrabold text-gray-900'>
-						All-in-one platform
+						The reason to choose JungleTech
 					</p>
 					<p className='mt-4 text-lg text-gray-500'>
-						Ac euismod vel sit maecenas id pellentesque eu sed
-						consectetur. Malesuada adipiscing sagittis vel nulla
-						nec.
+						Why you should go with JungleTech and not other agencies
 					</p>
 				</div>
 				<div className='mt-12 lg:mt-0 lg:col-span-1'>
@@ -41,7 +39,7 @@ const WhyUs = () => {
 							<div key={feature.name} className='relative'>
 								<dt>
 									<CheckIcon
-										className='absolute h-6 w-6 text-green-500'
+										className='absolute h-6 w-6 text-cyan-500'
 										aria-hidden='true'
 									/>
 									<p className='ml-9 text-lg leading-6 font-medium text-gray-900'>
