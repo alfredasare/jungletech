@@ -3,6 +3,7 @@ import Layout from '../components/layout/Layout';
 import OurWork from '../components/our-work/ourWork';
 import About from '../components/about/about';
 import Mission from '../components/mission/mission';
+import WhyUs from '../components/why-us/whyUs';
 
 const Home: NextPage = () => {
 	return (
@@ -10,6 +11,7 @@ const Home: NextPage = () => {
 			<About />
 			<Mission />
 			<OurWork />
+			<WhyUs />
 		</Layout>
 	);
 };
