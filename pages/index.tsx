@@ -1,10 +1,15 @@
 import type { NextPage } from 'next';
 import Layout from '../components/layout/Layout';
+import OurWork from '../components/our-work/ourWork';
+import About from '../components/about/about';
+import Mission from '../components/mission/mission';
 
 const Home: NextPage = () => {
 	return (
 		<Layout title='Home'>
-			<h1 className='text-4xl'>JungleTech</h1>
+			<About />
+			<Mission />
+			<OurWork />
 		</Layout>
 	);
 };

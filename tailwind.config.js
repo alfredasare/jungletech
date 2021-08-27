@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
 	purge: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
@@ -9,10 +11,13 @@ module.exports = {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 			},
+			colors: {
+				rose: colors.rose,
+			},
 		},
 	},
 	variants: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/aspect-ratio')],
 };
