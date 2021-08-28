@@ -52,8 +52,8 @@ const OurWork = () => {
 					<div>
 						<div className='aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden'>
 							<img
-								src='images/laptop.jpg'
-								alt='Laptop and coffee on mattress.'
+								src='images/developer.jpg'
+								alt='Developer on phone call.'
 								className='w-full h-full object-center object-cover'
 							/>
 						</div>
