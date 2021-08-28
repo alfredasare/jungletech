@@ -16,6 +16,9 @@ module.exports = {
 				teal: colors.teal,
 				cyan: colors.cyan,
 			},
+			spacing: {
+				'screen-plus': '105vh',
+			},
 		},
 	},
 	variants: {

@@ -23,3 +23,29 @@
 .desktop-nav-normal {
     @apply border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700;
 }
+
+/*Landing*/
+.landing-svg {
+    display: none;
+}
+
+@media screen and (min-width: 330px) {
+    .landing-svg {
+        width: 75%;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 370px) {
+    .landing-svg {
+        width: 85%;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .landing-svg {
+        width: 100%;
+        display: block;
+    }
+}
