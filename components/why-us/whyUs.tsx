@@ -1,22 +1,5 @@
 import FeatureItem from './featureItem';
-
-const features = [
-	{
-		name: 'Experience',
-		description:
-			'Experienced providing top-notch developers for world class companies.',
-	},
-	{
-		name: 'Management',
-		description:
-			'We’ve developed Developer-centric management acumen, ensuring continued motivation of developers and ' +
-			'longevity with clients.',
-	},
-	{
-		name: 'Results',
-		description: 'We make things happen.',
-	},
-];
+import features from './data/features';
 
 const WhyUs = () => {
 	return (
