@@ -5,19 +5,19 @@ import MenuButton from './menuButton';
 
 const navigation = [
 	{
-		name: 'Dashboard',
-		href: '/dash',
-	},
-	{
-		name: 'Team',
+		name: 'About',
 		href: '/',
 	},
 	{
-		name: 'Projects',
+		name: 'Mission',
 		href: '/',
 	},
 	{
-		name: 'Calendar',
+		name: 'Our Work',
+		href: '/',
+	},
+	{
+		name: 'Why Us',
 		href: '/',
 	},
 ];
