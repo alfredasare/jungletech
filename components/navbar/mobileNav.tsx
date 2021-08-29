@@ -30,7 +30,9 @@ const MobileNav: FC<IProps> = ({ navigation }) => {
 										: 'mobile-nav-normal'
 								}  block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
 							>
-								{navItem.name}
+								<Disclosure.Button>
+									{navItem.name}
+								</Disclosure.Button>
 							</a>
 						</Link>
 					))}

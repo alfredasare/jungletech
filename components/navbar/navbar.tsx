@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { Disclosure } from '@headlessui/react';
 import MobileNav from './mobileNav';
 import DesktopNav from './desktopNav';
@@ -24,6 +25,13 @@ const navigation = [
 ];
 
 const Navbar = () => {
+	const router = useRouter();
+	console.log(router.route);
+
+	if (typeof window !== 'undefined') {
+		console.log(window.location.hash);
+	}
+
 	return (
 		<Disclosure as='nav' className='bg-white shadow fixed w-full z-10'>
 			{({ open }) => (
