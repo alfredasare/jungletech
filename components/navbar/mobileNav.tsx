@@ -1,4 +1,4 @@
-import { Fragment, FC } from 'react';
+import { Fragment, FC, Dispatch, SetStateAction } from 'react';
 import { Disclosure, Transition } from '@headlessui/react';
 import { NavItems } from './types/navItems';
 import Link from 'next/link';
@@ -6,9 +6,11 @@ import { nanoid } from 'nanoid';
 
 interface IProps {
 	navigation: NavItems;
+	currentHash: string;
+	setCurrentHash: Dispatch<SetStateAction<string>>;
 }
 
-const MobileNav: FC<IProps> = ({ navigation }) => {
+const MobileNav: FC<IProps> = ({ navigation, currentHash, setCurrentHash }) => {
 	return (
 		<Transition
 			as={Fragment}
@@ -25,10 +27,11 @@ const MobileNav: FC<IProps> = ({ navigation }) => {
 						<Link key={nanoid()} href={navItem.href}>
 							<a
 								className={`${
-									navItem.name === 'Dashboard'
+									navItem.href === currentHash
 										? 'mobile-nav-active'
 										: 'mobile-nav-normal'
 								}  block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+								onClick={() => setCurrentHash(navItem.href)}
 							>
 								<Disclosure.Button>
 									{navItem.name}

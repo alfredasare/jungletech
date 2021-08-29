@@ -1,8 +1,12 @@
 import SocialIcon from './socialIcon';
 import FooterNavItem from './footerNavItem';
 import footerData from './data/footerData';
+import { useContext } from 'react';
+import { NavContext } from '../../context/NavProvider';
 
 const Footer = () => {
+	const { setCurrentHash } = useContext(NavContext);
+
 	return (
 		<footer className='bg-gray-900'>
 			<div className='max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8'>
@@ -11,7 +15,11 @@ const Footer = () => {
 					aria-label='Footer'
 				>
 					{footerData.main.map(item => (
-						<FooterNavItem key={item.name} item={item} />
+						<FooterNavItem
+							key={item.name}
+							item={item}
+							setCurrentHash={setCurrentHash}
+						/>
 					))}
 				</nav>
 				<div className='mt-8 flex justify-center space-x-6'>
