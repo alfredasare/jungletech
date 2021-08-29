@@ -1,9 +1,9 @@
 const footerData = {
 	main: [
-		{ name: 'About', href: '#' },
-		{ name: 'Mission', href: '#' },
-		{ name: 'Our Work', href: '#' },
-		{ name: 'Why Us', href: '#' },
+		{ name: 'About', href: '#about' },
+		{ name: 'Mission', href: '#mission' },
+		{ name: 'Our Work', href: '#work' },
+		{ name: 'Why Us', href: '#why-us' },
 	],
 	social: [
 		{
