@@ -1,23 +1,16 @@
-import { useContext, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import AboutContent from './aboutContent';
 import RoundedRectangle from './roundedRectangle';
 import Dots from '../svg/about/dots';
 import TestimonialCard from './testimonialCard';
-import { NavContext } from '../../context/NavProvider';
+import useIntersection from '../../hooks/useIntersection';
 
 const About = () => {
-	const { setCurrentHash } = useContext(NavContext);
-
 	const { ref, inView } = useInView({
-		threshold: 1.0,
+		threshold: 0.7,
 	});
 
-	useEffect(() => {
-		if (inView) {
-			setCurrentHash('#about');
-		}
-	}, [inView, setCurrentHash]);
+	useIntersection(inView, '#about');
 
 	return (
 		<div ref={ref} id='about' className='relative mt-32 sm:mt-64 md:mt-20'>

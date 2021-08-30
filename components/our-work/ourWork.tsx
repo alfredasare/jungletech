@@ -1,23 +1,15 @@
+import { useInView } from 'react-intersection-observer';
 import ImageGrid from './imageGrid';
 import WorkItem from './workItem';
 import works from './data/works';
-import { useContext, useEffect } from 'react';
-import { NavContext } from '../../context/NavProvider';
-import { useInView } from 'react-intersection-observer';
+import useIntersection from '../../hooks/useIntersection';
 
 const OurWork = () => {
-	const { setCurrentHash } = useContext(NavContext);
-
 	const { ref, inView } = useInView({
-		threshold: 0.7,
+		threshold: 0.5,
 	});
 
-	useEffect(() => {
-		if (inView) {
-			setCurrentHash('#work');
-			console.log('ok');
-		}
-	}, [inView, setCurrentHash]);
+	useIntersection(inView, '#work');
 
 	return (
 		<div ref={ref} id='work' className='bg-white'>

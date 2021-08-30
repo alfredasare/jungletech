@@ -1,21 +1,14 @@
+import { useInView } from 'react-intersection-observer';
 import MissionItem from './missionItem';
 import missionData from './data/missionData';
-import { useContext, useEffect } from 'react';
-import { NavContext } from '../../context/NavProvider';
-import { useInView } from 'react-intersection-observer';
+import useIntersection from '../../hooks/useIntersection';
 
 const Mission = () => {
-	const { setCurrentHash } = useContext(NavContext);
-
 	const { ref, inView } = useInView({
-		threshold: 1.0,
+		threshold: 0.6,
 	});
 
-	useEffect(() => {
-		if (inView) {
-			setCurrentHash('#mission');
-		}
-	}, [inView, setCurrentHash]);
+	useIntersection(inView, '#mission');
 
 	return (
 		<div

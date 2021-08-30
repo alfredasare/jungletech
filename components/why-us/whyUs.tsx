@@ -1,21 +1,14 @@
+import { useInView } from 'react-intersection-observer';
 import FeatureItem from './featureItem';
 import features from './data/features';
-import { useContext, useEffect } from 'react';
-import { NavContext } from '../../context/NavProvider';
-import { useInView } from 'react-intersection-observer';
+import useIntersection from '../../hooks/useIntersection';
 
 const WhyUs = () => {
-	const { setCurrentHash } = useContext(NavContext);
-
 	const { ref, inView } = useInView({
 		threshold: 1.0,
 	});
 
-	useEffect(() => {
-		if (inView) {
-			setCurrentHash('#why-us');
-		}
-	}, [inView, setCurrentHash]);
+	useIntersection(inView, '#why-us');
 
 	return (
 		<div ref={ref} id='why-us' className='bg-white'>

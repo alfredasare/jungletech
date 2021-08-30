@@ -1,21 +1,14 @@
+import { useInView } from 'react-intersection-observer';
 import LandingContent from './landingContent';
 import LandingSvg from './landingSvg';
-import { useContext, useEffect } from 'react';
-import { NavContext } from '../../context/NavProvider';
-import { useInView } from 'react-intersection-observer';
+import useIntersection from '../../hooks/useIntersection';
 
 const Landing = () => {
-	const { setCurrentHash } = useContext(NavContext);
-
 	const { ref, inView } = useInView({
 		threshold: 0.5,
 	});
 
-	useEffect(() => {
-		if (inView) {
-			setCurrentHash('');
-		}
-	}, [inView, setCurrentHash]);
+	useIntersection(inView, '');
 
 	return (
 		<div
