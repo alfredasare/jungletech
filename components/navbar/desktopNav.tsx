@@ -14,8 +14,6 @@ const DesktopNav: FC<IProps> = ({
 	currentHash,
 	setCurrentHash,
 }) => {
-	console.log(currentHash);
-
 	return (
 		<div className='hidden lg:ml-6 lg:flex lg:space-x-8'>
 			{navigation.map(navItem => (

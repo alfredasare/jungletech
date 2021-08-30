@@ -1,9 +1,24 @@
 import FeatureItem from './featureItem';
 import features from './data/features';
+import { useContext, useEffect } from 'react';
+import { NavContext } from '../../context/NavProvider';
+import { useInView } from 'react-intersection-observer';
 
 const WhyUs = () => {
+	const { setCurrentHash } = useContext(NavContext);
+
+	const { ref, inView } = useInView({
+		threshold: 1.0,
+	});
+
+	useEffect(() => {
+		if (inView) {
+			setCurrentHash('#why-us');
+		}
+	}, [inView, setCurrentHash]);
+
 	return (
-		<div id='why-us' className='bg-white'>
+		<div ref={ref} id='why-us' className='bg-white'>
 			<div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pt-28 lg:pb-0 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
 				<div>
 					<h2 className='text-base font-semibold text-cyan-600 uppercase tracking-wide'>

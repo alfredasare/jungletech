@@ -1,9 +1,25 @@
 import MissionItem from './missionItem';
 import missionData from './data/missionData';
+import { useContext, useEffect } from 'react';
+import { NavContext } from '../../context/NavProvider';
+import { useInView } from 'react-intersection-observer';
 
 const Mission = () => {
+	const { setCurrentHash } = useContext(NavContext);
+
+	const { ref, inView } = useInView({
+		threshold: 1.0,
+	});
+
+	useEffect(() => {
+		if (inView) {
+			setCurrentHash('#mission');
+		}
+	}, [inView, setCurrentHash]);
+
 	return (
 		<div
+			ref={ref}
 			id='mission'
 			className='relative bg-white pt-24 pb-8 sm:py-12 lg:py-16'
 		>

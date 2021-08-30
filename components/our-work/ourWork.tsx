@@ -1,10 +1,26 @@
 import ImageGrid from './imageGrid';
 import WorkItem from './workItem';
 import works from './data/works';
+import { useContext, useEffect } from 'react';
+import { NavContext } from '../../context/NavProvider';
+import { useInView } from 'react-intersection-observer';
 
 const OurWork = () => {
+	const { setCurrentHash } = useContext(NavContext);
+
+	const { ref, inView } = useInView({
+		threshold: 0.7,
+	});
+
+	useEffect(() => {
+		if (inView) {
+			setCurrentHash('#work');
+			console.log('ok');
+		}
+	}, [inView, setCurrentHash]);
+
 	return (
-		<div id='work' className='bg-white'>
+		<div ref={ref} id='work' className='bg-white'>
 			<div className='max-w-2xl mx-auto py-12 px-4 sm:pt-16 sm:pb-0 sm:px-6 lg:max-w-7xl lg:px-8'>
 				<div className='grid items-center grid-cols-1 gap-y-16 gap-x-8 lg:grid-cols-2'>
 					<div>
