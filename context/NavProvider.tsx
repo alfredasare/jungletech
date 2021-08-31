@@ -46,6 +46,10 @@ const NavProvider: FC<IProps> = ({ children }) => {
 			name: 'Why Us',
 			href: '#why-us',
 		},
+		{
+			name: 'Contact',
+			href: '#contact',
+		},
 	];
 
 	useEffect(() => {

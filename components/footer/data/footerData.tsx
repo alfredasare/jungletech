@@ -4,6 +4,7 @@ const footerData = {
 		{ name: 'Mission', href: '#mission' },
 		{ name: 'Our Work', href: '#work' },
 		{ name: 'Why Us', href: '#why-us' },
+		{ name: 'Contact', href: '#contact' },
 	],
 	social: [
 		{
