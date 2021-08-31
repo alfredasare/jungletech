@@ -5,6 +5,7 @@ import About from '../components/about/about';
 import Mission from '../components/mission/mission';
 import WhyUs from '../components/why-us/whyUs';
 import Landing from '../components/landing/landing';
+import Contact from '../components/contact/contact';
 
 const Home: NextPage = () => {
 	return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
 			<Mission />
 			<OurWork />
 			<WhyUs />
+			<Contact />
 		</Layout>
 	);
 };

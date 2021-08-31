@@ -37,7 +37,7 @@ const WhyUs = () => {
 				</div>
 				<div className='mt-12 lg:mt-0 lg:col-span-1'>
 					<motion.dl
-						className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:grid-rows-4 sm:grid-flow-col
+						className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:grid-rows-3 sm:grid-flow-col
 						sm:gap-x-6 sm:gap-y-10 lg:gap-x-8'
 						initial='hidden'
 						animate={featureControl}
