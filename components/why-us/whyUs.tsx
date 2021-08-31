@@ -5,12 +5,13 @@ import FeatureItem from './featureItem';
 import features from './data/features';
 import useIntersection from '../../hooks/useIntersection';
 import { featureVariant } from '../../animations';
+import thresholdSetter from '../../animations/utils/thresholdSetter';
 
 const WhyUs = () => {
 	const featureControl = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: 1.0,
+		threshold: thresholdSetter(0.7, 0.3),
 	});
 
 	useIntersection(inView, '#why-us');

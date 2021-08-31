@@ -5,12 +5,13 @@ import MissionItem from './missionItem';
 import missionData from './data/missionData';
 import useIntersection from '../../hooks/useIntersection';
 import { missionVariant } from '../../animations';
+import thresholdSetter from '../../animations/utils/thresholdSetter';
 
 const Mission = () => {
 	const missionControls = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: 0.6,
+		threshold: thresholdSetter(0.4),
 	});
 
 	useIntersection(inView, '#mission');

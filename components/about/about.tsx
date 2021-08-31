@@ -7,12 +7,13 @@ import Dots from '../svg/about/dots';
 import TestimonialCard from './testimonialCard';
 import useIntersection from '../../hooks/useIntersection';
 import { testimonialVariant } from '../../animations';
+import thresholdSetter from '../../animations/utils/thresholdSetter';
 
 const About = () => {
 	const testimonialControls = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: 0.7,
+		threshold: thresholdSetter(0.4, 0.3),
 	});
 
 	useIntersection(inView, '#about');

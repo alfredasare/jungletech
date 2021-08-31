@@ -7,7 +7,7 @@ export const testimonialVariant = {
 		x: 0,
 		opacity: 1,
 		transition: {
-			stiffness: 90,
+			stiffness: 40,
 			type: 'spring',
 		},
 	},

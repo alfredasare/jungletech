@@ -6,6 +6,7 @@ import { NavContext } from '../../context/NavProvider';
 
 const Footer = () => {
 	const { setCurrentHash } = useContext(NavContext);
+	const date = new Date().getFullYear();
 
 	return (
 		<footer className='bg-gray-900'>
@@ -28,7 +29,7 @@ const Footer = () => {
 					))}
 				</div>
 				<p className='mt-8 text-center text-base text-gray-400'>
-					&copy; 2021 JungleTech. All rights reserved.
+					&copy; {date} JungleTech. All rights reserved.
 				</p>
 			</div>
 		</footer>

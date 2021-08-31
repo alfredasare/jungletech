@@ -6,12 +6,13 @@ import WorkItem from './workItem';
 import works from './data/works';
 import useIntersection from '../../hooks/useIntersection';
 import { workListVariant } from '../../animations';
+import thresholdSetter from '../../animations/utils/thresholdSetter';
 
 const OurWork = () => {
 	const workControls = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: 0.5,
+		threshold: thresholdSetter(0.5, 0.4),
 	});
 
 	useIntersection(inView, '#work');

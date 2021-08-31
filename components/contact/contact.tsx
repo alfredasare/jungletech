@@ -6,12 +6,13 @@ import OfficeLocation from './officeLocation';
 import { useInView } from 'react-intersection-observer';
 import useIntersection from '../../hooks/useIntersection';
 import { contactColumnVariant, contactVariant } from '../../animations';
+import thresholdSetter from '../../animations/utils/thresholdSetter';
 
 const Contact = () => {
 	const contactControls = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: 0.7,
+		threshold: thresholdSetter(0.7, 0.5),
 	});
 
 	useIntersection(inView, '#contact');
