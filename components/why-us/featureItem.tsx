@@ -1,6 +1,8 @@
 import type { FC } from 'react';
+import { motion } from 'framer-motion';
 import { CheckIcon } from '@heroicons/react/outline';
 import { Feature } from './types/feature';
+import { featureItemVariant } from '../../animations';
 
 interface IProps {
 	feature: Feature;
@@ -8,7 +10,7 @@ interface IProps {
 
 const FeatureItem: FC<IProps> = ({ feature }) => {
 	return (
-		<div className='relative'>
+		<motion.div className='relative' variants={featureItemVariant}>
 			<dt>
 				<CheckIcon
 					className='absolute h-6 w-6 text-cyan-500'
@@ -21,7 +23,7 @@ const FeatureItem: FC<IProps> = ({ feature }) => {
 			<dd className='mt-2 ml-9 text-base text-gray-500'>
 				{feature.description}
 			</dd>
-		</div>
+		</motion.div>
 	);
 };
 

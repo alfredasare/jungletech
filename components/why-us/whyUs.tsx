@@ -1,14 +1,25 @@
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import FeatureItem from './featureItem';
 import features from './data/features';
 import useIntersection from '../../hooks/useIntersection';
+import { featureVariant } from '../../animations';
 
 const WhyUs = () => {
+	const featureControl = useAnimation();
+
 	const { ref, inView } = useInView({
 		threshold: 1.0,
 	});
 
 	useIntersection(inView, '#why-us');
+
+	useEffect(() => {
+		if (inView) {
+			featureControl.start('visible');
+		}
+	}, [inView, featureControl]);
 
 	return (
 		<div ref={ref} id='why-us' className='bg-white'>
@@ -25,11 +36,17 @@ const WhyUs = () => {
 					</p>
 				</div>
 				<div className='mt-12 lg:mt-0 lg:col-span-1'>
-					<dl className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8'>
+					<motion.dl
+						className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:grid-rows-4 sm:grid-flow-col
+						sm:gap-x-6 sm:gap-y-10 lg:gap-x-8'
+						initial='hidden'
+						animate={featureControl}
+						variants={featureVariant}
+					>
 						{features.map(feature => (
 							<FeatureItem key={feature.name} feature={feature} />
 						))}
-					</dl>
+					</motion.dl>
 				</div>
 			</div>
 		</div>

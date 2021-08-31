@@ -32,7 +32,7 @@ const AboutContent: FC<IProps> = ({ inView }) => {
 						JungleTech is an IT services company specializing in
 						software development outsourcing.
 					</p>
-					<p className='text-base leading-7'>
+					<p className='text-lg leading-7'>
 						With over 20 years experience in the IT space in Europe,
 						Middle East and Africa, our team brings a wealth of
 						experience in providing top notch services for

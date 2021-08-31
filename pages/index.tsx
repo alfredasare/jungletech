@@ -8,7 +8,7 @@ import Landing from '../components/landing/landing';
 
 const Home: NextPage = () => {
 	return (
-		<Layout title='Home'>
+		<Layout title='JungleTech - Hire top talent from around the world'>
 			<Landing />
 			<About />
 			<Mission />
