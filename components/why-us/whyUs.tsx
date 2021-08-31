@@ -24,7 +24,7 @@ const WhyUs = () => {
 
 	return (
 		<div ref={ref} id='why-us' className='bg-white'>
-			<div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pt-28 lg:pb-0 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
+			<div className='max-w-7xl mx-auto py-16 px-5 sm:px-6 lg:pt-28 lg:pb-0 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
 				<div>
 					<h2 className='text-base font-semibold text-cyan-600 uppercase tracking-wide'>
 						Why us?

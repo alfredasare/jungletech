@@ -23,7 +23,7 @@ const Contact = () => {
 
 	return (
 		<div ref={ref} id='contact' className='bg-white'>
-			<div className='max-w-7xl mx-auto pt-8 pb-16 px-4 sm:pt-0 md:pt-16 sm:px-6 lg:px-8'>
+			<div className='max-w-7xl mx-auto pt-8 pb-16 px-5 sm:pt-0 md:pt-16 sm:px-6 lg:px-8'>
 				<motion.div
 					className='max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8'
 					initial='hidden'
