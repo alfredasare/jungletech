@@ -15,6 +15,7 @@
 		"@headlessui/react": "^1.4.0",
 		"@heroicons/react": "^1.0.4",
 		"@tailwindcss/aspect-ratio": "^0.2.1",
+		"framer-motion": "^4.1.17",
 		"nanoid": "^3.1.25",
 		"next": "11.1.0",
 		"react": "17.0.2",

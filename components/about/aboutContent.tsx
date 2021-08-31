@@ -1,7 +1,29 @@
-const AboutContent = () => {
+import type { FC } from 'react';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { aboutContentVariant } from '../../animations/about';
+
+interface IProps {
+	inView: boolean;
+}
+
+const AboutContent: FC<IProps> = ({ inView }) => {
+	const aboutContentControls = useAnimation();
+
+	useEffect(() => {
+		if (inView) {
+			aboutContentControls.start('visible');
+		}
+	}, [inView, aboutContentControls]);
+
 	return (
 		<div className='relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0'>
-			<div className='pt-12 sm:pt-16 lg:pt-0'>
+			<motion.div
+				className='pt-12 sm:pt-16 lg:pt-0'
+				initial='hidden'
+				animate={aboutContentControls}
+				variants={aboutContentVariant}
+			>
 				<h2 className='text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl'>
 					On a mission to empower clients
 				</h2>
@@ -18,7 +40,7 @@ const AboutContent = () => {
 						manufacturing, education, financial, and more.
 					</p>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };
