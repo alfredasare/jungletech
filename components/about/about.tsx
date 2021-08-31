@@ -6,7 +6,7 @@ import RoundedRectangle from './roundedRectangle';
 import Dots from '../svg/about/dots';
 import TestimonialCard from './testimonialCard';
 import useIntersection from '../../hooks/useIntersection';
-import { testimonialVariant } from '../../animations/about';
+import { testimonialVariant } from '../../animations';
 
 const About = () => {
 	const testimonialControls = useAnimation();

@@ -1,14 +1,23 @@
+import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 import MissionItem from './missionItem';
 import missionData from './data/missionData';
 import useIntersection from '../../hooks/useIntersection';
+import { missionVariant } from '../../animations';
 
 const Mission = () => {
+	const missionControls = useAnimation();
+
 	const { ref, inView } = useInView({
 		threshold: 0.6,
 	});
 
 	useIntersection(inView, '#mission');
+
+	useEffect(() => {
+		if (inView) missionControls.start('visible');
+	}, [inView, missionControls]);
 
 	return (
 		<div
@@ -28,11 +37,16 @@ const Mission = () => {
 					and values.
 				</p>
 				<div className='mt-12'>
-					<div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+					<motion.div
+						className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'
+						initial='hidden'
+						animate={missionControls}
+						variants={missionVariant}
+					>
 						{missionData.map(mission => (
 							<MissionItem key={mission.name} mission={mission} />
 						))}
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>

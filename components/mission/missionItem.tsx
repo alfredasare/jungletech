@@ -1,5 +1,7 @@
-import type { FC } from 'react';
+import { FC } from 'react';
 import { MissionType } from './types/mission';
+import { motion } from 'framer-motion';
+import { missionItemVariant } from '../../animations';
 
 interface IProps {
 	mission: MissionType;
@@ -7,7 +9,7 @@ interface IProps {
 
 const MissionItem: FC<IProps> = ({ mission }) => {
 	return (
-		<div key={mission.name} className='pt-6'>
+		<motion.div className='pt-6' variants={missionItemVariant}>
 			<div className='flow-root bg-gray-50 h-60 min-h-full rounded-lg px-6 pb-8'>
 				<div className='-mt-6'>
 					<div>
@@ -26,7 +28,7 @@ const MissionItem: FC<IProps> = ({ mission }) => {
 					</p>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
