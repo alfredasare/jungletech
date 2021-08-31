@@ -1,15 +1,26 @@
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ImageGrid from './imageGrid';
 import WorkItem from './workItem';
 import works from './data/works';
 import useIntersection from '../../hooks/useIntersection';
+import { workListVariant } from '../../animations';
 
 const OurWork = () => {
+	const workControls = useAnimation();
+
 	const { ref, inView } = useInView({
 		threshold: 0.5,
 	});
 
 	useIntersection(inView, '#work');
+
+	useEffect(() => {
+		if (inView) {
+			workControls.start('visible');
+		}
+	}, [inView, workControls]);
 
 	return (
 		<div ref={ref} id='work' className='bg-white'>
@@ -25,11 +36,16 @@ const OurWork = () => {
 							</p>
 						</div>
 
-						<dl className='mt-10 space-y-10 w-11/12'>
+						<motion.dl
+							className='mt-10 space-y-10 w-11/12'
+							initial='hidden'
+							animate={workControls}
+							variants={workListVariant}
+						>
 							{works.map(work => (
 								<WorkItem key={work.name} work={work} />
 							))}
-						</dl>
+						</motion.dl>
 					</div>
 
 					<ImageGrid />
