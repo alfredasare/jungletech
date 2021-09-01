@@ -21,8 +21,7 @@ const Developer = () => {
 			originX: 0,
 			transition: {
 				duration: 0.1,
-				repeat: Infinity,
-				repeatType: 'reverse',
+				yoyo: Infinity,
 				repeatDelay: 1.8,
 			},
 		},
@@ -30,7 +29,7 @@ const Developer = () => {
 
 	useEffect(() => {
 		textControls.start('visible');
-	}, []);
+	}, [textControls]);
 
 	return (
 		<svg
