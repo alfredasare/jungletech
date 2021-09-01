@@ -1546,7 +1546,7 @@ const Developer = () => {
 								animate={{
 									scale: [1.0, 0.8, 1.0],
 									transition: {
-										duration: 1,
+										duration: 4,
 										repeat: Infinity,
 									},
 								}}
@@ -1560,13 +1560,20 @@ const Developer = () => {
 							r='8.36'
 						/>
 						<g className='cls-101'>
-							<path
+							<motion.path
 								className='cls-102'
+								animate={{
+									scale: [1.2, 0.8, 1.2],
+									transition: {
+										duration: 1,
+										repeat: Infinity,
+									},
+								}}
 								d='M414.85,161.8a15.39,15.39,0,1,1,15.39-15.38A15.4,15.4,0,0,1,414.85,161.8Zm0-29.77a14.39,14.39,0,1,0,14.39,14.39A14.4,14.4,0,0,0,414.85,132Z'
 							/>
 						</g>
 						<circle
-							className='cls-13'
+							className='cls-13 circle-top'
 							cx='414.85'
 							cy='146.42'
 							r='7.87'
@@ -1589,22 +1596,33 @@ const Developer = () => {
 							width='54.44'
 							height='2.73'
 						/>
-						<polygon
-							className='cls-103'
-							points='183.35 92.12 183.35 115.75 211.6 115.99 211.99 91.36 183.35 92.12'
-						/>
-						<polygon
-							className='cls-104'
-							points='211.99 91.36 213.83 94.47 212.91 115.97 211.6 115.99 211.99 91.36'
-						/>
-						<polygon
-							className='cls-13'
-							points='188.4 100.1 191 96.31 205.12 108.15 202.95 111.04 188.4 100.1'
-						/>
-						<polygon
-							className='cls-13'
-							points='205.48 100.1 202.87 96.31 188.76 108.15 190.92 111.04 205.48 100.1'
-						/>
+						<motion.g
+							className='cls-102'
+							animate={{
+								scale: [1.2, 0.8, 1.2],
+								transition: {
+									duration: 2,
+									repeat: Infinity,
+								},
+							}}
+						>
+							<polygon
+								className='cls-103'
+								points='183.35 92.12 183.35 115.75 211.6 115.99 211.99 91.36 183.35 92.12'
+							/>
+							<polygon
+								className='cls-104'
+								points='211.99 91.36 213.83 94.47 212.91 115.97 211.6 115.99 211.99 91.36'
+							/>
+							<polygon
+								className='cls-13'
+								points='188.4 100.1 191 96.31 205.12 108.15 202.95 111.04 188.4 100.1'
+							/>
+							<polygon
+								className='cls-13'
+								points='205.48 100.1 202.87 96.31 188.76 108.15 190.92 111.04 205.48 100.1'
+							/>
+						</motion.g>
 						<path
 							className='cls-105'
 							d='M249.27,370.18H152.58a7.93,7.93,0,0,1-7.92-7.74l-1.8-79.3a7.91,7.91,0,0,1,7.92-8.1H251.44a7.92,7.92,0,0,1,7.92,8.13l-2.17,79.31A7.92,7.92,0,0,1,249.27,370.18Z'

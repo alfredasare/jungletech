@@ -53,3 +53,7 @@ html {
         display: block;
     }
 }
+
+.circle-top {
+    transform: translate(-1px, 0px);
+}
