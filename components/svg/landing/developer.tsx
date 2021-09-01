@@ -1912,7 +1912,6 @@ const Developer = () => {
 								transition: {
 									duration: 3,
 									yoyo: Infinity,
-									repeatDelay: 1,
 								},
 							}}
 						>
