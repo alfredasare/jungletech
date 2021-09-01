@@ -1,6 +1,37 @@
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
 
 const Developer = () => {
+	const textControls = useAnimation();
+	const textVariant = {
+		hidden: {},
+		visible: {
+			transition: {
+				staggerChildren: 0.095,
+			},
+		},
+	};
+
+	const textChildVariant = {
+		hidden: {
+			scaleX: 0,
+			transformOrigin: '0% 0%',
+		},
+		visible: {
+			scaleX: 1,
+			transformOrigin: '0% 0%',
+			transition: {
+				duration: 1,
+				repeat: Infinity,
+				repeatDelay: 2,
+			},
+		},
+	};
+
+	useEffect(() => {
+		textControls.start('visible');
+	}, []);
+
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
@@ -1631,132 +1662,156 @@ const Developer = () => {
 							className='cls-106'
 							d='M249.27,370.43H152.58a8.22,8.22,0,0,1-8.17-8l-1.8-79.31a8.16,8.16,0,0,1,8.17-8.35H251.44a8.16,8.16,0,0,1,8.17,8.39l-2.17,79.31A8.13,8.13,0,0,1,249.27,370.43Zm-98.49-95.14a7.65,7.65,0,0,0-7.67,7.84l1.8,79.31a7.72,7.72,0,0,0,7.67,7.49h96.69a7.64,7.64,0,0,0,7.67-7.46l2.17-79.3a7.67,7.67,0,0,0-7.67-7.88Z'
 						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='291.26'
-							width='50.85'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='296.55'
-							width='25.42'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='300.98'
-							width='25.42'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='197.2'
-							y='300.98'
-							width='20.23'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='305.4'
-							width='40.99'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='309.82'
-							width='14.59'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='186.51'
-							y='323.08'
-							width='25.23'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='314.24'
-							width='45.73'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='318.66'
-							width='35.18'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='323.08'
-							width='16.55'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='327.5'
-							width='25.42'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='331.92'
-							width='7.29'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='179.22'
-							y='331.92'
-							width='26.46'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='186.51'
-							y='336.21'
-							width='25.23'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='336.21'
-							width='16.55'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='340.63'
-							width='25.42'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='168.92'
-							y='345.06'
-							width='7.29'
-							height='2.18'
-						/>
-						<rect
-							className='cls-13'
-							x='179.22'
-							y='345.06'
-							width='26.46'
-							height='2.18'
-						/>
+						<motion.g
+							initial='hidden'
+							animate={textControls}
+							variants={textVariant}
+						>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='291.26'
+								width='50.85'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='296.55'
+								width='25.42'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='300.98'
+								width='25.42'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='197.2'
+								y='300.98'
+								width='20.23'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='305.4'
+								width='40.99'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='309.82'
+								width='14.59'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='186.51'
+								y='323.08'
+								width='25.23'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='314.24'
+								width='45.73'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='318.66'
+								width='35.18'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='323.08'
+								width='16.55'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='327.5'
+								width='25.42'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='331.92'
+								width='7.29'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='179.22'
+								y='331.92'
+								width='26.46'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='186.51'
+								y='336.21'
+								width='25.23'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='336.21'
+								width='16.55'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='340.63'
+								width='25.42'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='168.92'
+								y='345.06'
+								width='7.29'
+								height='2.18'
+							/>
+							<motion.rect
+								variants={textChildVariant}
+								className='cls-13'
+								x='179.22'
+								y='345.06'
+								width='26.46'
+								height='2.18'
+							/>
+						</motion.g>
 						<path
 							className='cls-107'
 							d='M508.72,108.84a4.47,4.47,0,1,1-4.47-4.47A4.47,4.47,0,0,1,508.72,108.84Z'
