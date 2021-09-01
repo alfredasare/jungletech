@@ -19,6 +19,9 @@ module.exports = {
 			spacing: {
 				'screen-plus': '105vh',
 			},
+			gridTemplateColumns: {
+				custom: '0.8fr 1fr',
+			},
 		},
 	},
 	variants: {

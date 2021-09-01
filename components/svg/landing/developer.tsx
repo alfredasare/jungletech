@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const Developer = () => {
 	return (
 		<svg
@@ -1539,8 +1541,15 @@ const Developer = () => {
 							height='1.74'
 						/>
 						<g className='cls-101'>
-							<path
+							<motion.path
 								className='cls-102'
+								animate={{
+									scale: [1.0, 0.8, 1.0],
+									transition: {
+										duration: 1,
+										repeat: Infinity,
+									},
+								}}
 								d='M375.93,189.17a15.39,15.39,0,1,1,15.38-15.39A15.4,15.4,0,0,1,375.93,189.17Zm0-29.77a14.39,14.39,0,1,0,14.38,14.38A14.4,14.4,0,0,0,375.93,159.4Z'
 							/>
 						</g>
