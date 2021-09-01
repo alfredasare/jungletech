@@ -7,7 +7,7 @@ const Developer = () => {
 		hidden: {},
 		visible: {
 			transition: {
-				staggerChildren: 0.095,
+				staggerChildren: 0.1,
 			},
 		},
 	};
@@ -15,15 +15,15 @@ const Developer = () => {
 	const textChildVariant = {
 		hidden: {
 			scaleX: 0,
-			transformOrigin: '0% 0%',
 		},
 		visible: {
 			scaleX: 1,
-			transformOrigin: '0% 0%',
+			originX: 0,
 			transition: {
-				duration: 1,
+				duration: 0.1,
 				repeat: Infinity,
-				repeatDelay: 2,
+				repeatType: 'reverse',
+				repeatDelay: 1.8,
 			},
 		},
 	};
