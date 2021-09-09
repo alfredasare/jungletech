@@ -57,3 +57,31 @@ html {
 .circle-top {
     transform: translate(-1px, 0px);
 }
+
+.image-grid-item {
+    height: 330px;
+}
+
+@media screen and (min-width: 640px) {
+    .image-grid-item {
+        height: 320px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .image-grid-item {
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .image-grid-item {
+        height: 430px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .image-grid-item {
+        height: 530px;
+    }
+}

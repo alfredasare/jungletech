@@ -25,7 +25,7 @@ const Contact = () => {
 		<div ref={ref} id='contact' className='bg-gray-900'>
 			<div className='max-w-7xl mx-auto pt-16 pb-16 px-7 md:pt-32 sm:px-6 lg:px-8'>
 				<h1 className='mb-16 text-4xl md:text-6xl text-center font-extrabold text-white'>
-					Let's make something great together.
+					We'd love to be your partner. Let's...
 				</h1>
 				<motion.div
 					className='max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8'

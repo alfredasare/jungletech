@@ -1,30 +1,31 @@
-const ImageGrid = () => {
+import { workListVariant } from '../../animations';
+import WorkItem from './workItem';
+import works from './data/works';
+import { AnimationControls, motion } from 'framer-motion';
+import { FC } from 'react';
+
+interface IProps {
+	workControls: AnimationControls;
+}
+
+const ImageGrid: FC<IProps> = ({ workControls }) => {
 	return (
-		<div>
-			<div className='aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden'>
-				<img
-					src='images/developer.jpg'
-					alt='Developer on phone call.'
-					className='w-full h-full object-center object-cover'
-				/>
+		<motion.div
+			className='grid items-center grid-cols-1 gap-y-0 md:gap-y-16 gap-x-32 md:grid-cols-2'
+			initial='hidden'
+			animate={workControls}
+			variants={workListVariant}
+		>
+			<div className='md:mt-30 lg:mt-60'>
+				<WorkItem work={works[0]} />
+				<WorkItem work={works[1]} />
 			</div>
-			<div className='grid grid-cols-2 gap-4 mt-4 sm:gap-6 sm:mt-6 lg:gap-8 lg:mt-8'>
-				<div className='aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden'>
-					<img
-						src='images/ui-designer.jpg'
-						alt='3 developers collaborating.'
-						className='w-full h-full object-center object-cover'
-					/>
-				</div>
-				<div className='aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden'>
-					<img
-						src='images/lagos-techie.jpg'
-						alt='Woman explaining something to fellow worker.'
-						className='w-full h-full object-center object-cover'
-					/>
-				</div>
+
+			<div className='md:-mt-40 lg:-mt-60'>
+				<WorkItem work={works[2]} />
+				<WorkItem work={works[3]} />
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
