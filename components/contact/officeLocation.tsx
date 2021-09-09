@@ -7,7 +7,7 @@ const OfficeLocation = () => {
 			target='_blank'
 			rel='noreferrer'
 		>
-			<div className='flex text-gray-500 hover:text-gray-700'>
+			<div className='flex text-gray-200 hover:text-white'>
 				<div className='flex-shrink-0'>
 					<LocationMarkerIcon
 						className='h-6 w-6'

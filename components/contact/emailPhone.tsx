@@ -3,7 +3,7 @@ import { MailIcon, PhoneIcon } from '@heroicons/react/outline';
 const EmailPhone = () => {
 	return (
 		<>
-			<div className='flex text-gray-500 hover:text-gray-700'>
+			<div className='flex text-gray-200 hover:text-white'>
 				<div className='flex-shrink-0'>
 					<PhoneIcon className='h-6 w-6' aria-hidden='true' />
 				</div>
@@ -31,7 +31,7 @@ const EmailPhone = () => {
 				target='_blank'
 				rel='noreferrer'
 			>
-				<div className='mt-6 flex text-gray-500 hover:text-gray-700'>
+				<div className='mt-6 flex text-gray-200 hover:text-white'>
 					<div className='flex-shrink-0'>
 						<MailIcon className='h-6 w-6' aria-hidden='true' />
 					</div>
