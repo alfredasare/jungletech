@@ -2,9 +2,6 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import AboutContent from './aboutContent';
-import RoundedRectangle from './roundedRectangle';
-import Dots from '../svg/about/dots';
-import TestimonialCard from './testimonialCard';
 import useIntersection from '../../hooks/useIntersection';
 import { testimonialVariant } from '../../animations';
 import thresholdSetter from '../../animations/utils/thresholdSetter';
@@ -25,23 +22,19 @@ const About = () => {
 	}, [inView, testimonialControls]);
 
 	return (
-		<div ref={ref} id='about' className='relative mt-32 sm:mt-64 md:mt-20'>
-			<div className='px-2 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center'>
+		<div ref={ref} id='about' className='relative mt-20 sm:mt-64 md:mt-20'>
+			<div className='px-2 py-5 lg:py-24 lg:mx-auto lg:max-w-7xl md:px-8 md:grid md:grid-cols-2 md:gap-24 lg:items-center'>
 				<motion.div
 					className='relative sm:py-16 lg:py-0'
 					variants={testimonialVariant}
 					initial='hidden'
 					animate={testimonialControls}
 				>
-					<div
-						aria-hidden='true'
-						className='hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen'
-					>
-						<RoundedRectangle />
-						<Dots />
-					</div>
-
-					<TestimonialCard />
+					<p className='text-xl md:text-3xl text-gray-900 tracking-tight sm:text-2xl'>
+						JungleTech is an IT services company specializing in
+						software development outsourcing and we're on a mission
+						to empower clients.
+					</p>
 				</motion.div>
 
 				<AboutContent inView={inView} />
