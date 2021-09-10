@@ -2,7 +2,7 @@ export const workListVariant = {
 	hidden: {},
 	visible: {
 		transition: {
-			staggerChildren: 0.095,
+			staggerChildren: 0.4,
 		},
 	},
 };

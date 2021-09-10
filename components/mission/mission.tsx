@@ -21,7 +21,7 @@ const Mission = () => {
 	}, [inView, missionControls]);
 
 	return (
-		<div ref={ref} id='mission' className='bg-white lg:mb-20'>
+		<div ref={ref} id='mission' className='bg-white'>
 			<div className='lg:relative'>
 				<div className='relative w-full h-64 sm:h-72 md:h-96 mt-20 lg:mt-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full'>
 					<img

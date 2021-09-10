@@ -26,7 +26,7 @@ const About = () => {
 		<div
 			ref={ref}
 			id='about'
-			className='relative mt-20 sm:mt-64 md:mt-0 md:mb-0 lg:mt-20 lg:mb-20'
+			className='relative mt-20 sm:mt-64 md:mt-0 md:mb-0 lg:mt-20 lg:mb-20 bg-gray-900'
 		>
 			<Dots />
 			<div className='px-2 py-5 lg:py-24 lg:mx-auto lg:max-w-7xl md:px-8 md:grid md:grid-cols-2 md:gap-24 lg:items-center'>
@@ -36,7 +36,7 @@ const About = () => {
 					initial='hidden'
 					animate={testimonialControls}
 				>
-					<p className='text-xl md:text-2xl lg:text-3xl text-gray-900 tracking-tight sm:text-2xl'>
+					<p className='text-xl md:text-2xl lg:text-3xl tracking-tight sm:text-2xl text-white'>
 						JungleTech is an IT services company specializing in
 						software development outsourcing and we're on a mission
 						to empower clients.

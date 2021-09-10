@@ -15,8 +15,8 @@ const WorkItem: FC<IProps> = ({ work }) => {
 				src={work.image}
 				alt={work.imageAlt}
 			/>
-			<h3 className='mt-7 text-xl font-medium'>{work.name}</h3>
-			<h4 className='mt-1 text-md text-gray-600'>{work.description}</h4>
+			<h3 className='mt-7 text-xl font-medium text-white'>{work.name}</h3>
+			<h4 className='mt-1 text-md text-gray-200'>{work.description}</h4>
 		</motion.div>
 	);
 };

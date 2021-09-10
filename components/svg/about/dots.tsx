@@ -21,7 +21,7 @@ const Dots = () => {
 						y={0}
 						width={4}
 						height={4}
-						className='text-gray-100'
+						className='text-gray-800'
 						fill='currentColor'
 					/>
 				</pattern>

@@ -12,7 +12,7 @@ const WhyUs = () => {
 	const featureControl = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: thresholdSetter(0.2, 0.3),
+		threshold: thresholdSetter(0.5, 0.3),
 	});
 
 	useIntersection(inView, '#why-us');
@@ -62,7 +62,7 @@ const WhyUs = () => {
 				</h1>
 			</div>
 
-			<div className='lg:relative'>
+			<div className='lg:relative bg-gray-900'>
 				<div className='relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2 lg:h-full'>
 					<img
 						className='absolute inset-0 w-full h-full object-cover'
@@ -76,7 +76,7 @@ const WhyUs = () => {
 							<h2 className='text-base font-semibold text-cyan-600 uppercase tracking-wide'>
 								Why us?
 							</h2>
-							<p className='mt-2 text-3xl font-extrabold text-gray-900'>
+							<p className='mt-2 text-3xl font-extrabold text-white'>
 								The reasons to choose JungleTech
 							</p>
 							<motion.dl

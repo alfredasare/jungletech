@@ -11,7 +11,7 @@ const MissionItem: FC<IProps> = ({ mission }) => {
 	return (
 		<motion.div className='relative flex' variants={missionItemVariant}>
 			<span
-				className='h-12 inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600
+				className='h-12 inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-500
 			 rounded-md shadow-lg'
 			>
 				<mission.icon

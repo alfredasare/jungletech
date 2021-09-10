@@ -21,13 +21,13 @@ const OurWork = () => {
 	}, [inView, workControls]);
 
 	return (
-		<div ref={ref} id='work' className='bg-white'>
-			<div className='max-w-2xl mx-auto py-12 px-5 sm:pt-16 sm:pb-0 sm:px-6 lg:max-w-7xl lg:px-8'>
-				<div className='border-b border-gray-200 pb-10 text-center'>
+		<div ref={ref} id='work'>
+			<div className='max-w-2xl mx-auto py-12 px-5 sm:pt-16 sm:pb-0 md:pb-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-16'>
+				<div className='border-b border-gray-500 pb-10 text-center'>
 					<h2 className='text-base font-semibold tracking-wider text-cyan-600 uppercase'>
 						Our work
 					</h2>
-					<p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+					<p className='mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl'>
 						What we do at JungleTech
 					</p>
 				</div>

@@ -8,7 +8,7 @@ interface IProps {
 
 const Layout: FC<IProps> = ({ children, title }) => {
 	return (
-		<main>
+		<main className='bg-gray-900'>
 			<Head>
 				<title>{title}</title>
 			</Head>

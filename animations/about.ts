@@ -22,7 +22,7 @@ export const aboutContentVariant = {
 		opacity: 1,
 		scale: 1.0,
 		transition: {
-			duration: 0.4,
+			duration: 0.7,
 		},
 	},
 };
