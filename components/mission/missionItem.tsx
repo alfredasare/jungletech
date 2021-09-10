@@ -9,23 +9,24 @@ interface IProps {
 
 const MissionItem: FC<IProps> = ({ mission }) => {
 	return (
-		<motion.div className='pt-6' variants={missionItemVariant}>
-			<div className='flow-root bg-gray-50 h-60 min-h-full rounded-lg px-6 pb-8'>
-				<div className='-mt-6'>
-					<div>
-						<span className='inline-flex items-center justify-center p-3 bg-cyan-500 rounded-md shadow-lg'>
-							<mission.icon
-								className='h-6 w-6 text-white'
-								aria-hidden='true'
-							/>
-						</span>
-					</div>
-					<h3 className='mt-8 text-lg font-medium text-gray-900 tracking-tight'>
-						{mission.name}
-					</h3>
-					<p className='mt-5 text-base text-gray-500'>
-						{mission.text}
-					</p>
+		<motion.div
+			key={mission.name}
+			variants={missionItemVariant}
+			className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8 lg:items-center'
+		>
+			<div className='mt-6 lg:mt-0 lg:col-span-5 xl:col-span-4'>
+				<h3 className='text-lg font-medium text-gray-900'>
+					{mission.name}
+				</h3>
+				<p className='mt-2 text-md text-gray-500'>{mission.text}</p>
+			</div>
+			<div className='flex-auto lg:col-span-7 xl:col-span-8'>
+				<div className='aspect-w-5 aspect-h-2 rounded-lg bg-gray-100 overflow-hidden'>
+					<img
+						src={mission.image}
+						alt={mission.imageAlt}
+						className='object-center object-cover'
+					/>
 				</div>
 			</div>
 		</motion.div>
