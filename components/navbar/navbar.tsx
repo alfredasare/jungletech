@@ -10,7 +10,7 @@ const Navbar = () => {
 	const { currentHash, setCurrentHash, navigation } = useContext(NavContext);
 
 	return (
-		<Disclosure as='nav' className='bg-white shadow fixed w-full z-10'>
+		<Disclosure as='nav' className='bg-white shadow fixed w-full z-50'>
 			{({ open }) => (
 				<>
 					<div className='max-w-7xl mx-auto px-2 sm:px-4 lg:px-8'>
