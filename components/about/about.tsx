@@ -5,6 +5,7 @@ import AboutContent from './aboutContent';
 import useIntersection from '../../hooks/useIntersection';
 import { testimonialVariant } from '../../animations';
 import thresholdSetter from '../../animations/utils/thresholdSetter';
+import Dots from '../svg/about/dots';
 
 const About = () => {
 	const testimonialControls = useAnimation();
@@ -27,6 +28,7 @@ const About = () => {
 			id='about'
 			className='relative mt-20 sm:mt-64 md:mt-0 md:mb-0 lg:mt-20 lg:mb-20'
 		>
+			<Dots />
 			<div className='px-2 py-5 lg:py-24 lg:mx-auto lg:max-w-7xl md:px-8 md:grid md:grid-cols-2 md:gap-24 lg:items-center'>
 				<motion.div
 					className='relative sm:py-16 lg:py-0 px-4 sm:px-6 lg:px-0'

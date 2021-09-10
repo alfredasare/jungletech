@@ -1,7 +1,7 @@
 const Dots = () => {
 	return (
 		<svg
-			className='absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12'
+			className='absolute top-1 right-1/2 -mr-3 lg:-left-8 lg:right-auto lg:top-3'
 			width={404}
 			height={392}
 			fill='none'
@@ -21,7 +21,7 @@ const Dots = () => {
 						y={0}
 						width={4}
 						height={4}
-						className='text-gray-200'
+						className='text-gray-100'
 						fill='currentColor'
 					/>
 				</pattern>
