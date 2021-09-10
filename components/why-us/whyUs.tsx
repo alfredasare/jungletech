@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import { annotate, annotationGroup } from 'rough-notation';
 import { useInView } from 'react-intersection-observer';
 import FeatureItem from './featureItem';
 import features from './data/features';
@@ -17,8 +18,31 @@ const WhyUs = () => {
 	useIntersection(inView, '#why-us');
 
 	useEffect(() => {
+		const techRef = document.querySelector('#tech');
+		const solveRef = document.querySelector('#solve');
+		const transformRef = document.querySelector('#transform');
+
+		const techAnnotation = annotate(techRef as HTMLElement, {
+			type: 'highlight',
+			color: 'cyan',
+		});
+		const solveAnnotation = annotate(solveRef as HTMLElement, {
+			type: 'highlight',
+			color: 'cyan',
+		});
+		const transformAnnotation = annotate(transformRef as HTMLElement, {
+			type: 'highlight',
+			color: 'cyan',
+		});
+
 		if (inView) {
 			featureControl.start('visible');
+			const ag = annotationGroup([
+				techAnnotation,
+				solveAnnotation,
+				transformAnnotation,
+			]);
+			ag.show();
 		}
 	}, [inView, featureControl]);
 
@@ -26,11 +50,15 @@ const WhyUs = () => {
 		<div ref={ref} id='why-us' className='bg-white'>
 			<div className='max-w-7xl mx-auto py-16 px-5 sm:px-6 lg:pt-60 lg:pb-60 lg:px-8'>
 				<h1
-					className='w-full md:w-3/4 mx-auto leading-normal text-center text-2xl sm:text-3xl md:text-4xl
+					className='w-full md:w-3/4 mx-auto leading-relaxed text-center text-2xl sm:text-3xl md:text-4xl
                 lg:text-5xl font-semibold'
 				>
-					We utilize the power of technology to solve complex problems
-					and transform businesses.
+					We utilize the power of{' '}
+					<span className='z-10' id='tech'>
+						technology
+					</span>{' '}
+					to <span id='solve'>solve</span> complex problems and{' '}
+					<span id='transform'>transform</span> businesses.
 				</h1>
 			</div>
 
