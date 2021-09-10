@@ -77,7 +77,7 @@ const WhyUs = () => {
 								Why us?
 							</h2>
 							<p className='mt-2 text-3xl font-extrabold text-gray-900'>
-								The reason to choose JungleTech
+								The reasons to choose JungleTech
 							</p>
 							<motion.dl
 								className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:grid-rows-3 sm:grid-flow-col

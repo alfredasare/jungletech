@@ -23,6 +23,13 @@ const Mission = () => {
 	return (
 		<div ref={ref} id='mission' className='bg-white lg:mb-20'>
 			<div className='lg:relative'>
+				<div className='relative w-full h-64 sm:h-72 md:h-96 mt-20 lg:mt-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full'>
+					<img
+						className='absolute inset-0 w-full h-full object-cover'
+						src='/images/why-1.jpg'
+						alt=''
+					/>
+				</div>
 				<div className='mx-auto max-w-7xl w-full pt-16 pb-20 text-left lg:py-48'>
 					<div className='px-4 lg:w-1/2 lg:mr-auto sm:px-8 xl:pr-16'>
 						<div>
@@ -48,13 +55,6 @@ const Mission = () => {
 							</motion.dl>
 						</div>
 					</div>
-				</div>
-				<div className='relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full'>
-					<img
-						className='absolute inset-0 w-full h-full object-cover'
-						src='/images/why-1.jpg'
-						alt=''
-					/>
 				</div>
 			</div>
 		</div>

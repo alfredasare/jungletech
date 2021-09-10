@@ -23,7 +23,7 @@ const AboutContent: FC<IProps> = ({ inView }) => {
 				animate={aboutContentControls}
 				variants={aboutContentVariant}
 			>
-				<div className='mt-16 md:-mt-4 text-gray-500'>
+				<div className='mt-16 lg:-mt-4 text-gray-500'>
 					<p className='text-md leading-7'>
 						With over 20 years experience in the IT space in Europe,
 						Middle East and Africa, our team brings a wealth of
