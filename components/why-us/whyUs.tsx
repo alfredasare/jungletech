@@ -11,7 +11,7 @@ const WhyUs = () => {
 	const featureControl = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: thresholdSetter(0.7, 0.3),
+		threshold: thresholdSetter(0.2, 0.3),
 	});
 
 	useIntersection(inView, '#why-us');
@@ -24,30 +24,49 @@ const WhyUs = () => {
 
 	return (
 		<div ref={ref} id='why-us' className='bg-white'>
-			<div className='max-w-7xl mx-auto py-16 px-5 sm:px-6 lg:pt-28 lg:pb-0 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
-				<div>
-					<h2 className='text-base font-semibold text-cyan-600 uppercase tracking-wide'>
-						Why us?
-					</h2>
-					<p className='mt-2 text-3xl font-extrabold text-gray-900'>
-						The reason to choose JungleTech
-					</p>
-					<p className='mt-4 text-lg text-gray-500'>
-						Why you should go with JungleTech and not other agencies
-					</p>
+			<div className='max-w-7xl mx-auto py-16 px-5 sm:px-6 lg:pt-60 lg:pb-60 lg:px-8'>
+				<h1
+					className='w-full md:w-3/4 mx-auto leading-normal text-center text-2xl sm:text-3xl md:text-4xl
+                lg:text-5xl font-semibold'
+				>
+					We utilize the power of technology to solve complex problems
+					and transform businesses.
+				</h1>
+			</div>
+
+			<div className='lg:relative'>
+				<div className='relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2 lg:h-full'>
+					<img
+						className='absolute inset-0 w-full h-full object-cover'
+						src='/images/why-2.jpg'
+						alt=''
+					/>
 				</div>
-				<div className='mt-12 lg:mt-0 lg:col-span-1'>
-					<motion.dl
-						className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:grid-rows-3 sm:grid-flow-col
+				<div className='mx-auto max-w-7xl w-full pt-16 pb-20 text-left lg:py-48'>
+					<div className='px-4 lg:w-1/2 lg:ml-auto sm:px-8 xl:pl-16'>
+						<div>
+							<h2 className='text-base font-semibold text-cyan-600 uppercase tracking-wide'>
+								Why us?
+							</h2>
+							<p className='mt-2 text-3xl font-extrabold text-gray-900'>
+								The reason to choose JungleTech
+							</p>
+							<motion.dl
+								className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:grid-rows-3 sm:grid-flow-col
 						sm:gap-x-6 sm:gap-y-10 lg:gap-x-8'
-						initial='hidden'
-						animate={featureControl}
-						variants={featureVariant}
-					>
-						{features.map(feature => (
-							<FeatureItem key={feature.name} feature={feature} />
-						))}
-					</motion.dl>
+								initial='hidden'
+								animate={featureControl}
+								variants={featureVariant}
+							>
+								{features.map(feature => (
+									<FeatureItem
+										key={feature.name}
+										feature={feature}
+									/>
+								))}
+							</motion.dl>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

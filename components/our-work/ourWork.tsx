@@ -9,7 +9,7 @@ const OurWork = () => {
 	const workControls = useAnimation();
 
 	const { ref, inView } = useInView({
-		threshold: thresholdSetter(0.1, 0.4),
+		threshold: thresholdSetter(0.1, 0.2),
 	});
 
 	useIntersection(inView, '#work');
