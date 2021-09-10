@@ -51,7 +51,7 @@ const WhyUs = () => {
 			<div className='max-w-7xl mx-auto py-16 px-5 sm:px-6 lg:pt-60 lg:pb-60 lg:px-8'>
 				<h1
 					className='w-full md:w-3/4 mx-auto leading-relaxed text-center text-2xl sm:text-3xl md:text-4xl
-                lg:text-5xl font-semibold'
+                lg:text-5xl font-normal'
 				>
 					We utilize the power of{' '}
 					<span className='z-10' id='tech'>
