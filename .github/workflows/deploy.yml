@@ -9,15 +9,13 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Get latest code
+      - name: Get latest code, verify install and build
         uses: actions/checkout@v2
+      - run: npm ci && npm run build
 
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-
-      - name: Verify install and build
-      - run: npm ci && npm run build
 
       - name: Ssh into server and run deployment commands
         uses: appleboy/ssh-action@master
